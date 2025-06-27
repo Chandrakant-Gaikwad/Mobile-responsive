@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FastTrack Transport</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo"><a href="#">FastTrack Transport</a></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Welcome to FastTrack</h1>
+      <p>Your journey, our drive. Reliable transport solutions across cities.</p>
+    </div>
+    <img src="HERO_BANNER.avif" alt="Transport Hero" />
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>FastTrack Transport offers dependable and safe transportation for passengers and cargo. With daily schedules, modern vehicles, and friendly staff, we're committed to top-tier mobility across regions.</p>
+  </section>
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <img src="BUS_SERVICE.jpeg" alt="Bus Service" />
+        <h3>Bus Transport</h3>
+        <p>Comfortable intercity & intracity services with flexible schedules.</p>
+      </div>
+      <div class="service">
+        <img src="Cargo_Delivery.jpeg" alt="Cargo Delivery" />
+        <h3>Cargo Delivery</h3>
+        <p>Reliable freight solutions with tracking and fast transit options.</p>
+      </div>
+      <div class="service">
+        <img src="Airport_Shuttle.jpeg" alt="Airport Shuttle" />
+        <h3>Airport Shuttle</h3>
+        <p>Convenient airport pickups and dropoffs across city regions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="routes" class="container">
+    <h2>Popular Routes</h2>
+    <ul class="route-list">
+      <li>Pune ↔ Mumbai — 5 departures daily</li>
+      <li>Pune ↔ Nashik — 3 departures daily</li>
+      <li>Pune ↔ Beed — 7 departures daily</li>
+      <li>Pune ↔ Hydrabad — 2 departures daily</li>
+    </ul>
+  </section>
+
+  <section id="fleet" class="container">
+    <h2>Our Fleet</h2>
+    <div class="fleet-grid">
+      <img src="Bus_Interior.jpeg" alt="Bus Interior" />
+      <img src="Cargo_Truck.jpeg" alt="Cargo Truck" />
+      <img src="Shuttle_Van.jpeg" alt="Shuttle Van" />
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Phone:</strong> +1 234 567 8901</p>
+      <p><strong>Email:</strong> support@fasttrack.com</p>
+      <p><strong>Address:</strong> 123 Transport Blvd, Mobility City, USA</p>
+    </div>
+    <form id="contact-form" onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FastTrack Transport. All rights reserved. Developed by Chandrakant.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+
+    function sendMessage(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      alert(`Thanks, ${name}! Your message was sent.`);
+      document.getElementById("contact-form").reset();
+    }
+  </script>
+</body>
+</html>
